@@ -5,5 +5,13 @@
 #include <algorithm>
 
 float vectorMax(std::vector<float> &numbers) {
-	return 0;
+	float minNum = -INFINITY;
+
+	for (int i = 0; i < numbers.size(); ++i) {
+		if (numbers[i] > minNum) {
+			minNum = numbers[i];
+		}
+	}
+
+	return minNum;
 }
